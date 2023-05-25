@@ -1,0 +1,222 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+
+    font-size: 75%;
+
+}
+body{
+    font-size: 1rem;
+    background-color: #88abff;
+}
+.note-container{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    position: relative;
+    
+}
+.detail{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #ffffff;
+    width: 22rem;
+    height: 21rem;
+    border-radius: 10px;
+    margin-left: 4.2rem;
+    margin-top: 4rem;
+    color: #88abff;
+
+    
+}
+.card{
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+.icon{
+display: flex;
+justify-content: center;
+align-items: center;
+font-size: 4rem;
+font-weight: 700;
+width: 6.5rem; 
+height:6.5rem;
+border: 2px dashed #88abff;
+border-radius: 50%;
+
+}
+.note{
+font-size: 1.8rem;
+font-weight: 700;
+}
+.note-card{
+display: flex;
+flex-direction: column;
+
+}
+.title{
+
+    line-height: 1.2rem;
+    max-height: 6rem;
+    padding: 1rem;
+    font-size: 1.5rem;
+    font-weight: 700;
+    overflow: auto;
+    text-align: justify;
+    margin-bottom: 1rem;
+    color: #555;
+   
+}
+.descrition{
+    line-height: 1.2rem;
+    max-height: 6rem;
+    padding: 1rem;
+    font-size: 1rem;
+    font-weight: 700;
+    overflow: auto;
+    text-align: justify;
+    margin-bottom: 1rem;
+    color: #555;
+   
+}
+.note-pad{
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+    border-top: 1px solid #555;
+    
+   
+}
+
+.date{
+font-size: 1.5rem;
+font-weight: 700;
+text-transform: capitalize;
+
+
+}
+.select{
+    display: flex;
+    margin-left: 14rem;
+
+}
+.select span{
+display: block;
+width: .50rem;
+height: .50rem;
+border-radius: 100%;
+cursor: pointer;
+background-color: #555;
+}
+.overlay{
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    overflow: hidden;
+    background-color: rgb(0, 0 ,0 , 0.35); 
+     opacity: 0;
+    visibility: hidden;
+    z-index: -1;
+    transition:opacity .3s linear;   
+}
+.overlay.active{
+    opacity: 1;
+    visibility: visible;
+    z-index: 1;  
+}
+.form-container{
+position: absolute;
+background-color: #fff;
+width: 30%;
+height: 45rem;
+left:40rem ;
+top: 5rem;  
+border-radius: 10px;
+opacity: 0;
+visibility: hidden;
+z-index: -2;
+transition: opacity .3s linear;  
+}
+.form-container.active{
+    opacity: 1;
+    visibility: visible;
+    z-index: 2;  
+}
+.form-control{
+display: flex;
+flex-direction: column;
+padding-top: 1rem;
+margin-left: 1rem;
+}
+.new-note{
+display: flex;
+justify-content: space-between;
+align-items: center;
+padding-bottom: 2rem;
+margin-top: 3rem;
+margin-left: 1rem;
+border-bottom: 1px solid #555;
+}
+
+.add-count{
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #555;
+}
+.times{
+font-size: 2rem;
+font-weight: 700;
+width: 4rem;
+cursor: pointer;
+}
+.form-control label{
+text-transform: capitalize;
+font-size: 1.5rem;
+font-weight: 700;
+margin-top: 2rem;
+color: #555;
+
+}
+input{
+    width: 95%;
+    height: 4rem;
+    padding-left: 1rem;
+    outline: none;
+    border: 1px solid #555;
+    border-radius: 5px;
+    
+
+}
+.form-control textarea{
+width: 95%;
+outline: none;
+border-radius: 5px;
+border: 1px solid #555;
+padding: 1rem;
+}
+.btn{
+   position: absolute;
+   left: 6rem;
+   margin-top: 4rem;
+    padding: 1.5rem 10rem;
+    text-transform: capitalize;
+    outline: none;
+    border: none;
+    border: 1px solid #555;
+    border-radius: 5px;
+    background-color: #88abff;
+    cursor: pointer;
+}
+.btn:hover{
+    background-color: #555;
+    color: #fff;
+}
